@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Rajeh</string>
+    <string name="burned">Burned</string>
+    <string name="enter_burned_calories">Enter burned calories</string>
+    <string name="intake">intake</string>
+    <string name="enter_calories_intake">Enter calories intake</string>
+    <string name="daily_calories_0_0">Daily Calories: 0.0</string>
+    <string name="total_calories_file_key">com.example.rajeh.PREFERENCE_FILE_KEY</string>
+</resources>

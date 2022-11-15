@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_200"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/totalCaloriesTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@color/gray_700"
+        android:padding="8dp"
+        android:textStyle="bold"
+        android:text="@string/daily_calories_0_0"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCalories"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="12dp"
+        android:background="@color/white"
+        android:paddingStart="14dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="14dp"
+        app:layout_constraintBottom_toTopOf="@id/intakeCaloriesLO"
+        app:layout_constraintTop_toBottomOf="@id/totalCaloriesTV"
+        tools:layout_editor_absoluteX="12dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@drawable/edit_floating"
+        app:layout_constraintBottom_toBottomOf="@id/rvCalories"
+        app:layout_constraintEnd_toEndOf="@id/rvCalories"/>
+
+    <LinearLayout
+        android:id="@+id/intakeCaloriesLO"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_700"
+        android:layout_margin="12dp"
+        android:padding="4dp"
+        app:layout_constraintBottom_toTopOf="@id/burnedCaloriesLO"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/intakeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/enter_calories_intake"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor" />
+
+        <Button
+            android:id="@+id/intakeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/intake" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/burnedCaloriesLO"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_700"
+        android:padding="4dp"
+        android:layout_margin="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <EditText
+            android:id="@+id/burnedTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/enter_burned_calories"
+            android:importantForAutofill="no"
+            tools:ignore="LabelFor" />
+
+        <Button
+            android:id="@+id/burnedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/burned" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
